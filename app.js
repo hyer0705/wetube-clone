@@ -11,6 +11,8 @@ import routes from "./routes";
 
 const app = express();
 
+app.set("view engine", "pug"); // view engine 을 pug로 바꿈
+
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
