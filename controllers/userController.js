@@ -23,9 +23,13 @@ export const postJoin = (req, res) => {
     }
 };
 
-export const login = (req, res) => res.render("login", { pageTitle: "Log In" });
+export const getLogin = (req, res) => res.render("login", { pageTitle: "Log In" });
+export const postLogin = (req, res) => {
+    res.redirect(routes.home);
+};
+
 export const logout = (req, res) => res.render("logout", { pageTitle: "Log Out" });
-export const users = (req, res) => res.send("Users");
+// export const users = (req, res) => res.send("Users");
 export const editProfile = (req, res) => res.render("editProfile", { pageTitle: "Edit Profile" });
 export const changePassword = (req, res) => res.render("changePassword", { pageTitle: "Change Password" });
 export const userDetail = (req, res) => res.render("userDetail", { pageTitle: "User Detail" });
