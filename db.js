@@ -4,7 +4,7 @@ export const videos = [
         title: "Video mukbang",
         description: "This is something. I love this video.",
         views: 25,
-        videoFile: "https://archive.org/details/BigBuckBunny_124",
+        videoFile: "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg",
         creator: {
             id: 960705,
             name: "lumiere",
@@ -16,7 +16,7 @@ export const videos = [
         title: "Video funny",
         description: "This is something. I love this video.",
         views: 25,
-        videoFile: "https://www.bigbuckbunny.org/",
+        videoFile: "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg",
         creator: {
             id: 960705,
             name: "lumiere",
@@ -28,7 +28,7 @@ export const videos = [
         title: "Video nice",
         description: "This is something. I love this video.",
         views: 25,
-        videoFile: "https://www.bigbuckbunny.org/",
+        videoFile: "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg",
         creator: {
             id: 960705,
             name: "lumiere",
@@ -40,7 +40,7 @@ export const videos = [
         title: "Video cool",
         description: "This is something. I love this video.",
         views: 25,
-        videoFile: "https://www.bigbuckbunny.org/",
+        videoFile: "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg",
         creator: {
             id: 960705,
             name: "lumiere",
