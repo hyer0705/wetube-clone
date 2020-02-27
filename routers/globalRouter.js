@@ -5,9 +5,11 @@ import { getJoin, logout, postJoin, getLogin, postLogin } from "../controllers/u
 
 const globalRouter = express.Router();
 
+// join
 globalRouter.get(routes.join, getJoin);
 globalRouter.post(routes.join, postJoin);
 
+// login
 globalRouter.get(routes.login, getLogin);
 globalRouter.post(routes.login, postLogin);
 

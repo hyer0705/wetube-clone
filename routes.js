@@ -29,7 +29,7 @@ const routes = {
     users: USERS,
     editProfile: EDIT_PROFILE,
     changePassword: CHANGE_PASSWORD,
-    userDetail: (id) => {
+    userDetail: id => {
         if (id) {
             return `/users/${id}`;
         } else {
@@ -38,7 +38,7 @@ const routes = {
     },
     videos: VIDEOS,
     upload: UPLOAD,
-    videoDetail: (id) => {
+    videoDetail: id => {
         if (id) {
             return `/videos/${id}`;
         } else {

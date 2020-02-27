@@ -28,7 +28,12 @@ export const postLogin = (req, res) => {
     res.redirect(routes.home);
 };
 
-export const logout = (req, res) => res.render("logout", { pageTitle: "Log Out" });
+export const logout = (req, res) => {
+    // TO DO: Process Log Out
+    // 로그아웃을 한 번더 확인하는 페이지를 만들 수 있음( logout.pug 실행)
+    // res.render("logout", { pageTitle: "Log Out" });
+    res.redirect(routes.home);
+}
 // export const users = (req, res) => res.send("Users");
 export const editProfile = (req, res) => res.render("editProfile", { pageTitle: "Edit Profile" });
 export const changePassword = (req, res) => res.render("changePassword", { pageTitle: "Change Password" });
