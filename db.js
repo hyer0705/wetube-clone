@@ -1,50 +1,17 @@
-export const videos = [
+import mongoose from "mongoose";
+
+mongoose.connect("mongodb://localhost:27017/we-tube",
     {
-        id: 891205,
-        title: "Video mukbang",
-        description: "This is something. I love this video.",
-        views: 25,
-        videoFile: "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg",
-        creator: {
-            id: 960705,
-            name: "lumiere",
-            email: "lumiere@gmail.com"
-        }
-    },
-    {
-        id: 940210,
-        title: "Video funny",
-        description: "This is something. I love this video.",
-        views: 25,
-        videoFile: "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg",
-        creator: {
-            id: 960705,
-            name: "lumiere",
-            email: "lumiere@gmail.com"
-        }
-    },
-    {
-        id: 890305,
-        title: "Video nice",
-        description: "This is something. I love this video.",
-        views: 25,
-        videoFile: "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg",
-        creator: {
-            id: 960705,
-            name: "lumiere",
-            email: "lumiere@gmail.com"
-        }
-    },
-    {
-        id: 900530,
-        title: "Video cool",
-        description: "This is something. I love this video.",
-        views: 25,
-        videoFile: "https://download.blender.org/peach/bigbuckbunny_movies/big_buck_bunny_480p_stereo.ogg",
-        creator: {
-            id: 960705,
-            name: "lumiere",
-            email: "lumiere@gmail.com"
-        }
+        useNewUrlParser: true,
+        useFindAndModify: false,
+        useUnifiedTopology: true
     }
-];
+);
+
+const db = mongoose.connection;
+
+const handleOpen = () => console.log("Connected to DB");
+const handleError = (error) => console.log(`Error on DB Connection:${error}`);
+
+db.once("open", handleOpen);
+db.on("error", handleError);
