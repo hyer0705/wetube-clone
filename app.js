@@ -12,6 +12,8 @@ import videoRouter from "./routers/videoRouter";
 
 const app = express();
 
+app.get('/favicon.ico', (req, res) => res.status(204));
+
 app.use(helmet());
 app.set("view engine", "pug"); // view engine 을 pug로 바꿈
 app.use(cookieParser());
