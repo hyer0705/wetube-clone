@@ -16,9 +16,10 @@ app.get('/favicon.ico', (req, res) => res.status(204));
 
 app.use(helmet());
 app.set("view engine", "pug"); // view engine 을 pug로 바꿈
+app.use("/uploads", express.static("uploads"));
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
 app.use(localsMiddleware);
