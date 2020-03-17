@@ -1,0 +1,10 @@
+-> github website 이동 후 권한 승인!
+github website(auth) -> /auth/github/callback 이라는 url로 가게됨
+githubLoginCallback (profile) 함수를 호출
+(이 함수는 모든 정보를 받음! 사용자의 profile을)
+ => cb(error? user?) 함수를 반드시 return 해주어야함!
+    (ex. cb(error) : user가 없음, cb(null, user) : 사용자 있음)
+
+    cookie = makeCookie(user) : passport가 user 정보를 통해 쿠키를 만듬
+    savedCookie = saveCookie(cookie) : passport가 만들어진 쿠키를 저장함
+    sendCookie(savedCookie) : 저장한 쿠키를 브라우저에 보냄
