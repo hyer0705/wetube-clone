@@ -128,6 +128,6 @@ export const userDetail = async (req, res) => {
 };
 
 // export const users = (req, res) => res.send("Users");
-export const editProfile = (req, res) => res.render("editProfile", { pageTitle: "Edit Profile" });
+export const getEditProfile = (req, res) => res.render("editProfile", { pageTitle: "Edit Profile" });
 export const changePassword = (req, res) => res.render("changePassword", { pageTitle: "Change Password" });
 
