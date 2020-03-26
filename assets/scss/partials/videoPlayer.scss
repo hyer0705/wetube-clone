@@ -1,5 +1,5 @@
 .videoPlayer{
-    // width: 90%;
+    max-width: 650px;
     position: relative;
     &:hover {
         .videoPlayer__controls{
