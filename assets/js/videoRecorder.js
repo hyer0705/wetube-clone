@@ -3,16 +3,33 @@ const recordeBtn = document.getElementById("jsRecordBtn");
 const videoPreview = document.getElementById("jsVideoPreview");
 
 let streamObject;
+let videoRecorder;
 
-const handleVideoData = event => {
-    console.log(event);
-}
+const handleVideoData = (event) => {
+    const {
+        data: videoFile
+    } = event;
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(videoFile);
+    link.download = "recorded.webm";
+    document.body.appendChild(link);
+    link.click();
+};
+
+const stopRecording = () => {
+    videoRecorder.stop();
+    recordeBtn.removeEventListener("click", stopRecording);
+    recordeBtn.addEventListener("click", getVideo);
+    recordeBtn.innerHTML = "Start recording";
+};
 
 const startRecording = () => {
-    const videoRecorder = new MediaRecorder(streamObject);
+    videoRecorder = new MediaRecorder(streamObject);
     videoRecorder.start();
-    videoRecorder.addEventListener("dataavailabe", handleVideoData);
-}
+    videoRecorder.addEventListener("dataavailable", handleVideoData);
+    recordeBtn.addEventListener("click", stopRecording);
+};
+
 
 const getVideo = async () => {
     try {
@@ -31,7 +48,7 @@ const getVideo = async () => {
     } finally {
         recordeBtn.removeEventListener("click", getVideo);
     }
-}
+};
 
 
 function init() {
